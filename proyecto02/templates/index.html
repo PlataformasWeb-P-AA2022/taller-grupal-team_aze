@@ -11,10 +11,10 @@
         <table>
           <tr>
               <th>ID</th>
-              <th>Nombre Propietario</th>
-              <th>Placa Vehiculo</th>
+              <th>Nombre del propirtario</th>
+              <th>Placa</th>
               <th>Año de Matricula</th>
-              <th>Costo</th>
+              <th>Costo de la Matricula</th>
               <th>Opciones</th>
           </tr>
 
@@ -22,17 +22,17 @@
           <tr>
                 <td><b>{{ m.id }}</b></td>
                 <td>
-                    <p class="name">{{ m.nombrePropietario }} </p>
+                    <p class="name">{{ m.nombre_pro }} </p>
                 </td>
                 <td>{{ m.placa }}</td>
-                <td>{{ m.anio }}</td>
-                <td>{{ m.costo }}</td>
+                <td>{{ m.anio_matricula }}</td>
+                <td>{{ m.cost_matricula }}</td>
                 <td class="name">
-                  [<a href="{{ url_for('matricula', matricula_id=m.id)}}">
+                  [<a href="{{ url_for('matriculas', matricula_id=d.id)}}">
                     Ver detalle
                   </a>]
                   [
-                  <a href="{{ url_for('editar', matricula_id=m.id) }}">Editar</a>
+                  <a href="{{ url_for('editar', docente_id=d.id) }}">Editar</a>
                   ]
                 </td>
             </tr>
